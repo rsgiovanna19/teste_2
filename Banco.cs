@@ -1,25 +1,37 @@
 using Microsoft.EntityFrameworkCore;
 
-public class AppDbContext : DbContext
+public class Banco : DbContext
 {
-    // Construtor que aceita DbContextOptions
-    public AppDbContext(DbContextOptions<AppDbContext> options)
-        : base(options)
-    { }
-    
-    // Tabelas
+    public Banco(DbContextOptions<Banco> options) : base(options) { }
+
     public DbSet<Livro> Livros => Set<Livro>();
+    public DbSet<Cliente> Clientes => Set<Cliente>();
+    public DbSet<Pedido> Pedidos => Set<Pedido>();
+    public DbSet<Autor> Autores => Set<Autor>();
+    public DbSet<Pagamentos> Pagamentos => Set<Pagamentos>();
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            string connectionString = "server=localhost;port=3306;database=planner;user=root;password=Jf66t4Rgi";
+            optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29)));
+        }
+    }
 }
 
-//criando objetos 
+
+
+/*criando objetos p teste 
 public class Banco{
     private static List<Livro> livros = new List<Livro>
     {
         new Livro { Id = 1, Autor = "Dan Brown", Nome = "O símbolo perdido", LeituraCompleta = false },
         new Livro { Id = 2, Autor = "Dan Brown", Nome = "Diário de um banana", LeituraCompleta = true },
-    };
+    };*/
 
-    public static List<Livro> getLivros(){
+//nao eh necessário após o appDbContext
+/*    public static List<Livro> getLivros(){
         return livros;
     }
 
@@ -60,7 +72,7 @@ public class Banco{
 
         livros.Remove(livroExistente);
         return true;
-    }
+    }*/
 
-}
+
 
