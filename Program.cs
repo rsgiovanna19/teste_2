@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
     // Configure o serviço do DbContext para usar MySQL
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql("server=localhost;port=3306;database=planner;user=root;password=Jf66t4Rgi",
+    options.UseMySql("server=localhost;port=3306;database=planner;user=root;password=Jf66t4Rgi",    //my password - mysql
     new MySqlServerVersion(new Version(8, 0, 33))));
 
 

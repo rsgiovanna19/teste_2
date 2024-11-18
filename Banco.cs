@@ -1,16 +1,3 @@
-/*using Microsoft.EntityFrameworkCore;
-
-public class AppDbContext : DbContext
-{
-    // Construtor que aceita DbContextOptions
-    public AppDbContext(DbContextOptions<AppDbContext> options)
-        : base(options)
-    { }
-    
-    // Tabelas
-    public DbSet<Livro> Livros => Set<Livro>();
-}*/
-
 using Microsoft.EntityFrameworkCore;
 
 public class AppDbContext : DbContext
@@ -28,7 +15,10 @@ public class Banco{
         new Livro { Id = 2, Autor = "Dan Brown", Nome = "Diário de um banana", LeituraCompleta = true },
     };
 
-    public static List<Livro> getLivros(){
+}
+
+//nao eh necessário após o appDbContext
+/*    public static List<Livro> getLivros(){
         return livros;
     }
 
@@ -69,7 +59,7 @@ public class Banco{
 
         livros.Remove(livroExistente);
         return true;
-    }
+    }*/
 
-}
+
 
