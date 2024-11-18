@@ -6,6 +6,8 @@ public class Banco : DbContext
 
     public DbSet<Livro> Livros => Set<Livro>();
     public DbSet<Cliente> Clientes => Set<Cliente>();
+    public DbSet<Pedido> Pedidos => Set<Pedido>();
+    public DbSet<Autor> Autores => Set<Autor>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -16,10 +18,6 @@ public class Banco : DbContext
         }
     }
 }
-
-
-
-
 
 
 

@@ -11,6 +11,7 @@ var app = builder.Build();
 app.MapGet("/", () => "Loja da UP");
 app.MapLivroApi();
 app.MapClienteApi();
+app.MapPedidoApi();
 
 app.UseSwagger();
 app.UseSwaggerUI();
