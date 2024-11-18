@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace teste2.Migrations
 {
     [DbContext(typeof(Banco))]
-    [Migration("20241118020304_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241118144747_SecondCreate")]
+    partial class SecondCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,6 +19,23 @@ namespace teste2.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Comprado")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clientes");
+                });
 
             modelBuilder.Entity("Livro", b =>
                 {

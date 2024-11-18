@@ -4,23 +4,28 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<Banco>();
+var app = builder.Build();
+
+//inserir as APIs aqui
+app.MapGet("/", () => "Loja da UP");
+app.MapLivroApi();
+app.MapClienteApi();
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.Run();
 
 // Configuração Entity Framework para uso de um banco de dados em memória
 /*builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("Biblioteca"));*/
 
     // Configure o serviço do DbContext para usar MySQL
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<Banco>(options =>
     options.UseMySql("server=localhost;port=3306;database=planner;user=root;password=Jf66t4Rgi",    //my password - mysql
     new MySqlServerVersion(new Version(8, 0, 33))));
-
-
-var app = builder.Build();
-
-app.UseSwagger();
-app.UseSwaggerUI();
-
-app.MapGet("/", () => "Biblioteca da Giovanna!");
+/*app.MapGet("/", () => "Loja da UP");
 
 // Endpoint GET para listar todos os livros de forma assíncrona
 app.MapGet("/livros", async ([FromServices] AppDbContext db) =>
@@ -64,6 +69,4 @@ app.MapDelete("/livros/{id}", async (int id, [FromServices] AppDbContext db) =>
         return Results.NoContent();
     }
     return Results.NotFound();
-});
-
-app.Run();
+});*/

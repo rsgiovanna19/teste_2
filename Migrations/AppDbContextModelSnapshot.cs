@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace teste2.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(Banco))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -16,6 +16,23 @@ namespace teste2.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Comprado")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clientes");
+                });
 
             modelBuilder.Entity("Livro", b =>
                 {
