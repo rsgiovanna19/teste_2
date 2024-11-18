@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 
-
 public static class LivroApi{
 
 public static void MapLivroApi(this WebApplication app)

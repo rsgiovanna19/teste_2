@@ -8,6 +8,7 @@ public class Banco : DbContext
     public DbSet<Cliente> Clientes => Set<Cliente>();
     public DbSet<Pedido> Pedidos => Set<Pedido>();
     public DbSet<Autor> Autores => Set<Autor>();
+    public DbSet<Pagamentos> Pagamentos => Set<Pagamentos>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
