@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-public static class AutorApi
+public static class AutoresApi
 {
     public static void MapAutorApi(this WebApplication app)
     {
