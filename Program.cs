@@ -6,8 +6,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Configuração Entity Framework para uso de um banco de dados em memória
+/*builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseInMemoryDatabase("Biblioteca"));*/
+
+    // Configure o serviço do DbContext para usar MySQL
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseInMemoryDatabase("Biblioteca"));
+    options.UseMySql("server=localhost;port=3306;database=planner;user=root;password=Jf66t4Rgi",
+    new MySqlServerVersion(new Version(8, 0, 33))));
+
 
 var app = builder.Build();
 

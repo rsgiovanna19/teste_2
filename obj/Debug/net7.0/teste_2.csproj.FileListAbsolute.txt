@@ -39,3 +39,5 @@ C:\_wsgio\c#\teste_2\obj\Debug\net7.0\refint\teste_2.dll
 C:\_wsgio\c#\teste_2\obj\Debug\net7.0\teste_2.pdb
 C:\_wsgio\c#\teste_2\obj\Debug\net7.0\teste_2.genruntimeconfig.cache
 C:\_wsgio\c#\teste_2\obj\Debug\net7.0\ref\teste_2.dll
+C:\_wsgio\c#\teste_2\bin\Debug\net7.0\MySqlConnector.dll
+C:\_wsgio\c#\teste_2\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll

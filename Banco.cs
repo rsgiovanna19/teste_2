@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+/*using Microsoft.EntityFrameworkCore;
 
 public class AppDbContext : DbContext
 {
@@ -8,6 +8,15 @@ public class AppDbContext : DbContext
     { }
     
     // Tabelas
+    public DbSet<Livro> Livros => Set<Livro>();
+}*/
+
+using Microsoft.EntityFrameworkCore;
+
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
     public DbSet<Livro> Livros => Set<Livro>();
 }
 
