@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jel71lfvU7IXdWr4REPTbTBl/+rLcikN7wNT9vsVbECL7PgDxplfE9dFsixUwEG23D6AkM985lBG5mB3hrCQxA==",
+  "dgSpecHash": "V+AwSg4hs9Pff2RYe0B2sDKuoOzy1Z0QoFXLazc91iE8Z76v5+49B8ocXMS/YW38wfdeehRCxPjvv4EeRZ2rkg==",
   "success": true,
-  "projectFilePath": "C:\\_wsgio\\c#\\teste_2\\teste_2.csproj",
+  "projectFilePath": "C:\\_wsgio\\c#\\teste_2\\back\\teste_2\\teste_2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rsgio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\rsgio\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",

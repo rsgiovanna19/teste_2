@@ -1250,11 +1250,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_wsgio\\c#\\teste_2\\teste_2.csproj",
+      "projectUniqueName": "C:\\_wsgio\\c#\\teste_2\\back\\teste_2\\teste_2.csproj",
       "projectName": "teste_2",
-      "projectPath": "C:\\_wsgio\\c#\\teste_2\\teste_2.csproj",
+      "projectPath": "C:\\_wsgio\\c#\\teste_2\\back\\teste_2\\teste_2.csproj",
       "packagesPath": "C:\\Users\\rsgio\\.nuget\\packages\\",
-      "outputPath": "C:\\_wsgio\\c#\\teste_2\\obj\\",
+      "outputPath": "C:\\_wsgio\\c#\\teste_2\\back\\teste_2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rsgio\\AppData\\Roaming\\NuGet\\NuGet.Config"

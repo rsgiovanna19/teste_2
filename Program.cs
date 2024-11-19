@@ -12,6 +12,7 @@ app.MapGet("/", () => "Loja da UP");
 app.MapLivroApi();
 app.MapClienteApi();
 app.MapPedidoApi();
+app.MapAutorApi();
 
 app.UseSwagger();
 app.UseSwaggerUI();
